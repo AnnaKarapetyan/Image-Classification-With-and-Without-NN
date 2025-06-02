@@ -1,17 +1,17 @@
-# CIFAR-10 Image Classification Project
+# Image-Classification-With-and-Without-NN(CIFAR-10)
 
-In this project, I tried different methods to classify images from the CIFAR-10 dataset. The dataset has 60,000 color images in 10 different classes like airplanes, cars, birds, cats, and more. Each image is small (32x32 pixels), and there are 6,000 images for each class. I used both classic machine learning methods and deep learning to compare results.
+In this project, I tried different methods to classify images from the CIFAR-10 dataset. The dataset has 60,000 color images in 10 different classes like airplanes, cars, birds, cats, and more. Each image is small (32x32 pixels), and there are 6,000 images for each class.Both classic machine learning methods and deep learning are used to compare results.
 
 ### Models and Accuracy:
 
-* HOG + PCA + SVC → **62%**
 * HOG + PCA + SGD → **47%**
 * HOG + Color Histogram + PCA + XGBoost → **60%**
+* HOG + PCA + SVC → **62%**
 * Data Augmentation + CNN → **81%**
 
 ---
 
-## Overview of Techniques
+## Overview 
 
 ### Overview of HOG and PCA
 
@@ -37,21 +37,17 @@ Color histogram is a way to describe the color information in an image. It count
 
 ---
 
-## What is CNN with Data Augmentation?
+## CNN with Data Augmentation?
 
-CNN (Convolutional Neural Network) is a deep learning model that automatically learns features from images. It uses special filters to detect edges, textures, and shapes. CNNs are very strong for image tasks.
+CNN (Convolutional Neural Network) is a deep learning model that automatically learns features from images. It uses special filters to detect edges, textures, and shapes.
 
-Data augmentation is used to make the model better. It creates new images by slightly changing the original ones (rotating, flipping, zooming, etc.). This helps the CNN learn better and not just memorize the training images. That’s why this method gave the best accuracy: **81%**.
+Data augmentation is used to make the model better. It creates new images by slightly changing the original ones (rotating, flipping, zooming, etc.). This helps the CNN learn better and not just memorize the training images. This method gave the best accuracy: **81%**.
 
 ---
 
 ## Why was SGD not accurate?
 
 SGD (Stochastic Gradient Descent) is a simple model. It works well on easy problems, but CIFAR-10 images are complex. SGD could not learn all the patterns in the images. That’s why its accuracy was low: **47%**.
-
-## Why was CNN the best?
-
-CNN learns important parts of images in layers—from edges to shapes. It finds patterns automatically and works better on image data. That’s why it had the best performance in this project.
 
 ---
 
@@ -60,15 +56,11 @@ CNN learns important parts of images in layers—from edges to shapes. It finds 
 * Classical models with HOG, PCA, and color histograms gave moderate results (around 60% accuracy).
 * CNN with data augmentation gave the best result (81% accuracy).
 
-However, even CNN made mistakes. The most common confusion was between:
-
+In general, the models could tell apart animals and machines well. But similar animals or similar vehicles were sometimes mixed up.
+The most common confusion was between:
 * **Cat and Dog**
 * **Horse and Deer**
 * **Truck and Car**
 
-These classes look very similar, which made them hard to separate. In general, the models could tell apart animals and machines well. But similar animals or similar vehicles were sometimes mixed up.
-
 ---
 
-Thank you for reading!
-# Image-Classification-With-and-Without-NN
