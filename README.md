@@ -63,4 +63,6 @@ The most common confusion was between:
 * **Truck and Car**
 
 ---
+## Summary
 
+The results show that traditional machine learning models do not perform as well as neural networks, however with techniques like HOG, PCA, and color histograms, they can still achieve decent accuracy and be useful for specific datasets.
