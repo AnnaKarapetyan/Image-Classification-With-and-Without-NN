@@ -37,7 +37,7 @@ Color histogram is a way to describe the color information in an image. It count
 
 ---
 
-## CNN with Data Augmentation?
+## CNN with Data Augmentation
 
 CNN (Convolutional Neural Network) is a deep learning model that automatically learns features from images. It uses special filters to detect edges, textures, and shapes.
 
