@@ -47,7 +47,7 @@ Data augmentation is used to make the model better. It creates new images by sli
 
 ## Why was SGD not accurate?
 
-SGD (Stochastic Gradient Descent) is a simple model. It works well on easy problems, but CIFAR-10 images are complex. SGD could not learn all the patterns in the images. That’s why its accuracy was low: **47%**.
+SGD (Stochastic Gradient Descent) is a  linear model, so it could not separate the complex patterns in CIFAR-10 images. This lack of nonlinearity made it less accurate compared to methods like SVC or XGBoost. That’s why its accuracy was low: **47%**.
 
 ---
 
